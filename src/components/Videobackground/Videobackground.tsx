@@ -1,3 +1,9 @@
+import styled from '@emotion/styled';
+
+const StyledVideo = styled.video({
+  border: '4px solid red;',
+});
+
 export const Videobackground = () => {
-  return <div>video background</div>;
+  return <StyledVideo>video background</StyledVideo>;
 };
