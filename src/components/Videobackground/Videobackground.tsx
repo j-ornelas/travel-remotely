@@ -39,7 +39,6 @@ export const Videobackground = () => {
     const targetCity = cities.filter(city => city.name === target);
     return setCurrentCity(targetCity[0]);
   };
-  // TODO: find random video that fits city / options params.
   const filteredVideos = currentCity.videos.filter(video => {
     let timeFlag = true;
     let methodFlag = true;

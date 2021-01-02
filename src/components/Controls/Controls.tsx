@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import ReactAudioPlayer from 'react-audio-player';
 
 import { cities } from '../../data/cities';
 import { ControlsProps } from './controls-props';
@@ -10,9 +11,11 @@ export const Controls = ({
   updateCity,
   updateOptions,
 }: ControlsProps) => {
+  const currentSong = currentCity.radio[0];
   return (
     <StyledControls>
       <div>
+        <ReactAudioPlayer src={currentSong.url} autoPlay={true} controls />
         <div>CITIES</div>
         {cities.map(city => (
           <Option
@@ -74,8 +77,6 @@ export const Controls = ({
 
 const StyledControls = styled.div({
   border: '2px solid yellow',
-  width: '200px',
-  height: '300px',
   position: 'absolute',
   bottom: 45,
   right: 45,
