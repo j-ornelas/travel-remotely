@@ -5,14 +5,11 @@ export interface RadioStation {
 }
 export interface Video {
   url: string;
-  day?: boolean;
-  night?: boolean;
   // time to start the video, in case there's an intro we need to skip.
   // in seconds = ex: '8' for 8 seconds
   timeStart: string;
-  walk?: boolean;
-  car?: boolean;
-  train?: boolean;
+  method: string; // walk, train, car
+  time: string; // day, night (time of dayvideo takes place)
 }
 export interface City {
   name: string;

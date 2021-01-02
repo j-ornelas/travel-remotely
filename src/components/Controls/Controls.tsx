@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import styled from '@emotion/styled';
 
 import { cities } from '../../data/cities';
@@ -10,7 +10,6 @@ export const Controls = ({
   updateCity,
   updateOptions,
 }: ControlsProps) => {
-  console.log('OPTIONS!!!!!', options);
   return (
     <StyledControls>
       <div>
@@ -55,6 +54,12 @@ export const Controls = ({
           onClick={() => updateOptions('method', 'walk')}
         >
           walk
+        </Option>
+        <Option
+          isSelected={options.method === 'train'}
+          onClick={() => updateOptions('method', 'train')}
+        >
+          train
         </Option>
         <Option
           isSelected={options.method === 'any'}

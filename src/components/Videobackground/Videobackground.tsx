@@ -40,7 +40,19 @@ export const Videobackground = () => {
     return setCurrentCity(targetCity[0]);
   };
   // TODO: find random video that fits city / options params.
-  const currentVideo = currentCity.videos[0];
+  const filteredVideos = currentCity.videos.filter(video => {
+    let timeFlag = true;
+    let methodFlag = true;
+    if (videoOptions.time !== 'any') {
+      timeFlag = videoOptions.time === video.time;
+    }
+    if (videoOptions.method !== 'any') {
+      methodFlag = videoOptions.method === video.method;
+    }
+    return timeFlag && methodFlag;
+  });
+  const currentVideo =
+    filteredVideos[Math.floor(Math.random() * filteredVideos.length)];
   return (
     <StyledVideo>
       <VideoContainer>
