@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player';
 import styled from '@emotion/styled';
 
 import { cities } from '../../data/cities';
+import Controls from '../Controls';
 
 const StyledVideo = styled.div({
   height: '100vh',
@@ -10,6 +11,8 @@ const StyledVideo = styled.div({
   pointerEvents: 'none',
   position: 'relative',
 });
+
+const _default_options = {};
 
 export const Videobackground = () => {
   const [currentCity, setCurrentCity] = useState(cities[0]);
@@ -28,6 +31,7 @@ export const Videobackground = () => {
         playing={true}
         config={{ youtube: { playerVars: { disablekb: 1, showinfo: 0 } } }}
       />
+      <Controls />
     </StyledVideo>
   );
 };
