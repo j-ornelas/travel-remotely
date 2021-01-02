@@ -2,6 +2,70 @@ import React, { useState } from 'react';
 import styled from '@emotion/styled';
 
 import { cities } from '../../data/cities';
+import { ControlsProps } from './controls-props';
+
+export const Controls = ({
+  currentCity,
+  options,
+  updateCity,
+  updateOptions,
+}: ControlsProps) => {
+  console.log('OPTIONS!!!!!', options);
+  return (
+    <StyledControls>
+      <div>
+        <div>CITIES</div>
+        {cities.map(city => (
+          <Option
+            isSelected={currentCity.name === city.name}
+            onClick={() => updateCity(city.name)}
+          >
+            {city.name}
+          </Option>
+        ))}
+        <div>OPTIONS:</div>
+        <div>Time:</div>
+        <Option
+          isSelected={options.time === 'day'}
+          onClick={() => updateOptions('time', 'day')}
+        >
+          day
+        </Option>
+        <Option
+          isSelected={options.time === 'night'}
+          onClick={() => updateOptions('time', 'night')}
+        >
+          night
+        </Option>
+        <Option
+          isSelected={options.time === 'any'}
+          onClick={() => updateOptions('time', 'any')}
+        >
+          any
+        </Option>
+        <div>Method:</div>
+        <Option
+          isSelected={options.method === 'car'}
+          onClick={() => updateOptions('method', 'car')}
+        >
+          car
+        </Option>
+        <Option
+          isSelected={options.method === 'walk'}
+          onClick={() => updateOptions('method', 'walk')}
+        >
+          walk
+        </Option>
+        <Option
+          isSelected={options.method === 'any'}
+          onClick={() => updateOptions('method', 'any')}
+        >
+          any
+        </Option>
+      </div>
+    </StyledControls>
+  );
+};
 
 const StyledControls = styled.div({
   border: '2px solid yellow',
@@ -13,14 +77,7 @@ const StyledControls = styled.div({
   backgroundColor: 'rgba(0,0,0,0.5)',
   color: 'white',
 });
-export const Controls = () => {
-  return (
-    <StyledControls>
-      <div>
-        {cities.map(city => (
-          <div>{city.name}</div>
-        ))}
-      </div>
-    </StyledControls>
-  );
-};
+const Option = styled.div`
+  border: ${({ isSelected }: { isSelected: boolean }) =>
+    isSelected ? '1px solid yellow' : 'none'};
+`;

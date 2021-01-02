@@ -22,5 +22,11 @@ export const tokyo: City = {
       night: true,
       walk: true,
     },
+    {
+      url: 'https://www.youtube.com/watch?v=P6MzjAPTni8',
+      timeStart: '0',
+      day: true,
+      walk: true,
+    },
   ],
 };
