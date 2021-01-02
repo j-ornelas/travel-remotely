@@ -9,14 +9,18 @@ export const tokyo: City = {
       url: 'https://musicbird.leanstream.co/JCB032-MP3',
     },
   ],
-  videos: {
-    walk: [],
-    car: [
-      {
-        url: 'https://musicbird.leanstream.co/JCB032-MP3',
-        timeStart: '8',
-      },
-    ],
-    train: [],
-  },
+  videos: [
+    {
+      url: 'https://www.youtube.com/watch?v=wh6Wr93jrU4',
+      timeStart: '8',
+      night: true,
+      car: true,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=2PqkuJMbHaw',
+      timeStart: '0',
+      night: true,
+      walk: true,
+    },
+  ],
 };
