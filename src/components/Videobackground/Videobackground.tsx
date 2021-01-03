@@ -87,6 +87,7 @@ export const Videobackground = () => {
         updateOptions={updateOptionsByProp}
         updateCity={updateCityByName}
         currentCity={currentCity}
+        currentVideo={currentVideo}
       />
     </StyledVideo>
   );

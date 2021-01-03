@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import AudioPlayer from 'react-h5-audio-player';
+import Visibility from '@material-ui/icons/Visibility';
+import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import './audioplayer.css';
 
 import { cities } from '../../data/cities';
@@ -11,17 +13,19 @@ import { ControlsProps } from './controls-props';
 
 export const Controls = ({
   currentCity,
+  currentVideo,
   options,
   updateCity,
   updateOptions,
 }: ControlsProps) => {
+  const [isVisible, setIsVisible] = useState(true);
   const [currentStation, setCurrentStation] = useState<RadioStation>(
     getRandomFromList(currentCity.radio),
   );
   useEffect(() => {
     setCurrentStation(getRandomFromList(currentCity.radio));
   }, [currentCity]);
-  return (
+  return isVisible ? (
     <StyledControls>
       <div>
         <Header>CITIES:</Header>
@@ -127,7 +131,33 @@ export const Controls = ({
         showFilledProgress={false}
         autoPlayAfterSrcChange={true}
       />
+      <LinkRow>
+        <a href="https://www.buymeacoffee.com/johnornelas" target="_blank">
+          <CoffeeButton
+            src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png"
+            alt="Buy Me A Coffee"
+          />
+        </a>
+        <a href={currentVideo.url} target="_blank">
+          original video
+        </a>
+        <VisibilityContainer
+          isVisible={isVisible}
+          onClick={() => setIsVisible(false)}
+        >
+          <VisibilityOff />
+        </VisibilityContainer>
+      </LinkRow>
     </StyledControls>
+  ) : (
+    <HiddenContainer>
+      <VisibilityContainer
+        onClick={() => setIsVisible(true)}
+        isVisible={isVisible}
+      >
+        <Visibility />
+      </VisibilityContainer>
+    </HiddenContainer>
   );
 };
 
@@ -141,7 +171,13 @@ const StyledControls = styled.div({
   bottom: 45,
   right: 45,
   backgroundColor: colors.darker07,
-  color: 'white',
+  color: colors.lighter,
+});
+const HiddenContainer = styled.div({
+  position: 'absolute',
+  bottom: 60,
+  right: 45,
+  padding: '0 8px 0 0',
 });
 const Option = styled.div`
   padding: 8px;
@@ -174,3 +210,26 @@ const RadioContainer = styled.div({
 const RadioOption = styled.div({
   width: '25%',
 });
+const LinkRow = styled.div({
+  display: 'flex',
+  paddingTop: '4px',
+  paddingBottom: '4px',
+  color: `${colors.lighter01} !important`,
+  'a:link': {
+    color: colors.lighter09,
+  },
+  'a:visited': {
+    color: colors.primary09,
+  },
+  justifyContent: 'space-between',
+  alignItems: 'center',
+});
+const CoffeeButton = styled.img({
+  height: '50px',
+  width: '181px',
+});
+const VisibilityContainer = styled.div`
+  color: ${({ isVisible }: { isVisible: boolean }) =>
+    isVisible ? colors.light09 : colors.light07};
+  paddingtop: 4px;
+`;

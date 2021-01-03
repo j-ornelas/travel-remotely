@@ -6,6 +6,7 @@
   font-family: inherit;
   width: 100%;
   padding: 10px 15px;
+  padding-left: 0;
 }
 .rhap_container:focus:not(:focus-visible) {
   outline: 0;
@@ -167,7 +168,8 @@
 .rhap_volume-controls {
   display: flex;
   flex: 1 0 auto;
-  justify-content: flex-end;
+  padding-left: 16px;
+  justify-content: flex-start;
   align-items: center;
 }
 
