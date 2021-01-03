@@ -57,8 +57,8 @@ export const Videobackground = () => {
             height: '120%',
             width: '110%',
             position: 'absolute',
-            top: -50,
-            left: -100,
+            top: -57,
+            left: -120,
             overflow: 'hidden',
           }}
           config={{
