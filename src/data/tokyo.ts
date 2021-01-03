@@ -52,5 +52,11 @@ export const tokyo: City = {
       time: 'day',
       method: 'train',
     },
+    {
+      url: 'https://www.youtube.com/watch?v=R4B36TMMGp4',
+      timeStart: 75,
+      time: 'night',
+      method: 'walk',
+    },
   ],
 };
