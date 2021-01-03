@@ -3,6 +3,7 @@ import ReactPlayer from 'react-player';
 import styled from '@emotion/styled';
 
 import { cities } from '../../data/cities';
+import { Video } from '../../data/dataTypes';
 import Controls from '../Controls';
 import { getRandomFromList } from '../../utils/getRandomFromList';
 
@@ -14,13 +15,31 @@ export interface VideoOptions {
 const _default_options: VideoOptions = {
   time: 'any', // any, day, night
   method: 'walk', // any, train, car, walk
-  streetNoise: 'off', // ambient video noise - on or off
+  streetNoise: 'off', // ambient street noise - off/on
+};
+
+const filterVideos = (videos: Video[], options: VideoOptions) => {
+  return videos.filter(video => {
+    let timeFlag = true;
+    let methodFlag = true;
+    if (options.time !== 'any') {
+      timeFlag = options.time === video.time;
+    }
+    if (options.method !== 'any') {
+      methodFlag = options.method === video.method;
+    }
+    return timeFlag && methodFlag;
+  });
 };
 
 export const Videobackground = () => {
   const [currentCity, setCurrentCity] = useState(cities[0]);
   const [videoOptions, setVideoOptions] = useState<VideoOptions>(
     _default_options,
+  );
+  const [currentVideo, setCurrentVideo] = useState(
+    // can give users option to set current video?
+    getRandomFromList(filterVideos(currentCity.videos, videoOptions)),
   );
   const updateOptionsByProp = (prop: string, value: string) => {
     return setVideoOptions({
@@ -29,21 +48,12 @@ export const Videobackground = () => {
     });
   };
   const updateCityByName = (target: string) => {
-    const targetCity = cities.filter(city => city.name === target);
-    return setCurrentCity(targetCity[0]);
+    const targetCity = cities.filter(city => city.name === target)[0];
+    setCurrentVideo(
+      getRandomFromList(filterVideos(targetCity.videos, videoOptions)),
+    );
+    return setCurrentCity(targetCity);
   };
-  const filteredVideos = currentCity.videos.filter(video => {
-    let timeFlag = true;
-    let methodFlag = true;
-    if (videoOptions.time !== 'any') {
-      timeFlag = videoOptions.time === video.time;
-    }
-    if (videoOptions.method !== 'any') {
-      methodFlag = videoOptions.method === video.method;
-    }
-    return timeFlag && methodFlag;
-  });
-  const currentVideo = getRandomFromList(filteredVideos);
   return (
     <StyledVideo>
       <VideoContainer>
