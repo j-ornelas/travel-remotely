@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
 import AudioPlayer from 'react-h5-audio-player';
 import './audioplayer.css';
@@ -18,6 +18,9 @@ export const Controls = ({
   const [currentStation, setCurrentStation] = useState<RadioStation>(
     getRandomFromList(currentCity.radio),
   );
+  useEffect(() => {
+    setCurrentStation(currentCity.radio[0]);
+  }, [currentCity]);
   return (
     <StyledControls>
       <div>
