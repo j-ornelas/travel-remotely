@@ -27,7 +27,7 @@ export const Controls = ({
             isSelected={currentCity.name === city.name}
             onClick={() => updateCity(city.name)}
           >
-            {city.name}
+            <Subheader>{city.name}</Subheader>
           </Option>
         ))}
         <Header>RADIO STATIONS:</Header>
@@ -148,8 +148,8 @@ const Option = styled.div`
   :hover {
     cursor: pointer;
   }
-  :last-of-type {
-    border: none;
+  &:last-of-type {
+    border-bottom: none;
   }
 `;
 const Header = styled.div({
@@ -166,6 +166,7 @@ const Subheader = styled.div({
 });
 const RadioContainer = styled.div({
   display: 'flex',
+  padding: '8px',
 });
 const RadioOption = styled.div({
   width: '25%',
