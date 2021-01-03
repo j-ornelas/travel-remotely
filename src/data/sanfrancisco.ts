@@ -5,8 +5,28 @@ export const sanfrancisco: City = {
   radio: [
     {
       name: 'KQED',
-      description: 'Bay Area public radio',
+      description: 'San Francisco public radio',
       url: 'https://streams.kqed.org/',
+    },
+    {
+      name: 'KPFB',
+      description: 'Berkeley public radio',
+      url: 'https://icecast.pacifica.org:8443/kpfb',
+    },
+    {
+      name: 'KALW',
+      description: 'San Francisco public radio 2',
+      url: 'https://live.streamguys1.com:2435/kalw',
+    },
+    {
+      name: 'KCEA',
+      description: 'Big Band / Swing / "The Great American Songbook"',
+      url: 'http://streaming.rubinbroadcasting.com/kcea',
+    },
+    {
+      name: 'KMVQ',
+      description: 'San Francisco top 40',
+      url: 'https://14623.live.streamtheworld.com/KMVQFMAAC_SC',
     },
   ],
   videos: [

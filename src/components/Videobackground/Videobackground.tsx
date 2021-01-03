@@ -4,6 +4,7 @@ import styled from '@emotion/styled';
 
 import { cities } from '../../data/cities';
 import Controls from '../Controls';
+import { getRandomFromList } from '../../utils/getRandomFromList';
 
 const StyledVideo = styled.div({
   height: '100vh', // TODO: remove
@@ -20,7 +21,7 @@ export interface VideoOptions {
 }
 const _default_options: VideoOptions = {
   time: 'any', // any, day, night
-  method: 'any', // any, train, car, walk
+  method: 'walk', // any, train, car, walk
 };
 
 export const Videobackground = () => {
@@ -50,8 +51,7 @@ export const Videobackground = () => {
     }
     return timeFlag && methodFlag;
   });
-  const currentVideo =
-    filteredVideos[Math.floor(Math.random() * filteredVideos.length)];
+  const currentVideo = getRandomFromList(filteredVideos);
   return (
     <StyledVideo>
       <VideoContainer>

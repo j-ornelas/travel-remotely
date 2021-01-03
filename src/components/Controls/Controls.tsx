@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from '@emotion/styled';
-import ReactAudioPlayer from 'react-audio-player';
+import AudioPlayer from 'react-h5-audio-player';
+import './audioplayer.css';
 
 import { cities } from '../../data/cities';
+import { colors } from '../../data/variables';
+import { RadioStation } from '../../data/dataTypes';
+import { getRandomFromList } from '../../utils/getRandomFromList';
 import { ControlsProps } from './controls-props';
+
+type HTMLElementEvent<T extends HTMLElement> = Event & {
+  target: T;
+};
 
 export const Controls = ({
   currentCity,
@@ -11,12 +19,13 @@ export const Controls = ({
   updateCity,
   updateOptions,
 }: ControlsProps) => {
-  const currentSong = currentCity.radio[0];
+  const [currentStation, setCurrentStation] = useState<RadioStation>(
+    getRandomFromList(currentCity.radio),
+  );
   return (
     <StyledControls>
       <div>
-        <ReactAudioPlayer src={currentSong.url} autoPlay={true} controls />
-        <div>CITIES</div>
+        <Header>CITIES:</Header>
         {cities.map(city => (
           <Option
             isSelected={currentCity.name === city.name}
@@ -25,65 +34,144 @@ export const Controls = ({
             {city.name}
           </Option>
         ))}
-        <div>OPTIONS:</div>
-        <div>Time:</div>
-        <Option
-          isSelected={options.time === 'day'}
-          onClick={() => updateOptions('time', 'day')}
+        <Header>RADIO STATIONS:</Header>
+        {currentCity.radio.map(station => (
+          <Option
+            isSelected={station.name === currentStation.name}
+            onClick={() => setCurrentStation(station)}
+          >
+            <Subheader>{station.name}</Subheader>
+            <div>{station.description}</div>
+          </Option>
+        ))}
+        <Header>OPTIONS:</Header>
+        <Subheader>Method:</Subheader>
+        <RadioContainer
+          onChange={(e: any) => updateOptions('method', e.target.value)}
         >
-          day
-        </Option>
-        <Option
-          isSelected={options.time === 'night'}
-          onClick={() => updateOptions('time', 'night')}
+          <RadioOption>
+            <input
+              type="radio"
+              value="walk"
+              name="method"
+              checked={options.method === 'walk'}
+            />
+            Walk
+          </RadioOption>
+          <RadioOption>
+            <input
+              type="radio"
+              value="car"
+              name="method"
+              checked={options.method === 'car'}
+            />
+            Car
+          </RadioOption>
+          <RadioOption>
+            <input
+              type="radio"
+              value="train"
+              name="method"
+              checked={options.method === 'train'}
+            />
+            Train
+          </RadioOption>
+          <RadioOption>
+            <input
+              type="radio"
+              value="any"
+              name="method"
+              checked={options.method === 'any'}
+            />
+            Any
+          </RadioOption>
+        </RadioContainer>
+        <Subheader>Time:</Subheader>
+        <RadioContainer
+          onChange={(e: any) => updateOptions('time', e.target.value)}
         >
-          night
-        </Option>
-        <Option
-          isSelected={options.time === 'any'}
-          onClick={() => updateOptions('time', 'any')}
-        >
-          any
-        </Option>
-        <div>Method:</div>
-        <Option
-          isSelected={options.method === 'car'}
-          onClick={() => updateOptions('method', 'car')}
-        >
-          car
-        </Option>
-        <Option
-          isSelected={options.method === 'walk'}
-          onClick={() => updateOptions('method', 'walk')}
-        >
-          walk
-        </Option>
-        <Option
-          isSelected={options.method === 'train'}
-          onClick={() => updateOptions('method', 'train')}
-        >
-          train
-        </Option>
-        <Option
-          isSelected={options.method === 'any'}
-          onClick={() => updateOptions('method', 'any')}
-        >
-          any
-        </Option>
+          <RadioOption>
+            <input
+              type="radio"
+              value="day"
+              name="time"
+              checked={options.time === 'day'}
+            />
+            Day
+          </RadioOption>
+          <RadioOption>
+            <input
+              type="radio"
+              value="night"
+              name="time"
+              checked={options.time === 'night'}
+            />
+            Night
+          </RadioOption>
+          <RadioOption>
+            <input
+              type="radio"
+              value="any"
+              name="time"
+              checked={options.time === 'any'}
+            />
+            Any
+          </RadioOption>
+        </RadioContainer>
       </div>
+      <AudioPlayer
+        src={currentStation.url}
+        autoPlay={true}
+        showSkipControls={false}
+        showJumpControls={false}
+        showDownloadProgress={false}
+        showFilledProgress={false}
+        autoPlayAfterSrcChange={true}
+      />
     </StyledControls>
   );
 };
 
 const StyledControls = styled.div({
-  border: '2px solid yellow',
+  border: `1px solid ${colors.light02}`,
+  width: '500px',
+  borderRadius: '6px',
+  padding: '8px',
+  paddingBottom: 0,
   position: 'absolute',
   bottom: 45,
   right: 45,
-  backgroundColor: 'rgba(0,0,0,0.5)',
+  backgroundColor: colors.darker07,
   color: 'white',
 });
 const Option = styled.div`
-  border: ${({ isSelected }: { isSelected: boolean }) =>
-    isSelected ? '1px solid yellow' : 'none'};
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid ${colors.light02};
+  background-color: ${({ isSelected }: { isSelected: boolean }) =>
+    isSelected ? colors.light03 : 'inherit'};
+  :hover {
+    cursor: pointer;
+  }
+  :last-of-type {
+    border: none;
+  }
 `;
+const Header = styled.div({
+  fontSize: '18px',
+  fontWeight: 'bold',
+  paddingTop: '8px',
+  paddingBottom: '8px',
+  color: colors.primary,
+});
+const Subheader = styled.div({
+  fontWeight: 'bold',
+  paddingBottom: '4px',
+  paddingTop: '4px',
+});
+const RadioContainer = styled.div({
+  display: 'flex',
+});
+const RadioOption = styled.div({
+  width: '25%',
+});
