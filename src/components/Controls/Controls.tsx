@@ -9,10 +9,6 @@ import { RadioStation } from '../../data/dataTypes';
 import { getRandomFromList } from '../../utils/getRandomFromList';
 import { ControlsProps } from './controls-props';
 
-type HTMLElementEvent<T extends HTMLElement> = Event & {
-  target: T;
-};
-
 export const Controls = ({
   currentCity,
   options,
