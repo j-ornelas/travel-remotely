@@ -9,15 +9,16 @@ import { getRandomFromList } from '../../utils/getRandomFromList';
 export interface VideoOptions {
   time: string;
   method: any;
+  streetNoise: string;
 }
 const _default_options: VideoOptions = {
   time: 'any', // any, day, night
   method: 'walk', // any, train, car, walk
+  streetNoise: 'off', // ambient video noise - on or off
 };
 
 export const Videobackground = () => {
   const [currentCity, setCurrentCity] = useState(cities[0]);
-  const [isVideoMuted, setVideoMuted] = useState(true);
   const [videoOptions, setVideoOptions] = useState<VideoOptions>(
     _default_options,
   );
@@ -51,7 +52,7 @@ export const Videobackground = () => {
           controls={false}
           height="115%"
           width="115%"
-          muted={true}
+          muted={videoOptions.streetNoise === 'off'}
           playing={true}
           style={{
             height: '120%',

@@ -125,6 +125,29 @@ export const Controls = ({
             Any
           </RadioOption>
         </RadioContainer>
+        <Subheader>Street Noise:</Subheader>
+        <RadioContainer
+          onChange={(e: any) => updateOptions('streetNoise', e.target.value)}
+        >
+          <RadioOption>
+            <input
+              type="radio"
+              value="on"
+              name="streetNoise"
+              checked={options.streetNoise === 'on'}
+            />
+            On
+          </RadioOption>
+          <RadioOption>
+            <input
+              type="radio"
+              value="off"
+              name="streetNoise"
+              checked={options.streetNoise === 'off'}
+            />
+            Off
+          </RadioOption>
+        </RadioContainer>
       </div>
       <AudioPlayer
         src={currentStation.url}
