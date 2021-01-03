@@ -141,8 +141,7 @@ const StyledControls = styled.div({
   color: 'white',
 });
 const Option = styled.div`
-  padding-top: 8px;
-  padding-bottom: 8px;
+  padding: 8px;
   border-bottom: 1px solid ${colors.light02};
   background-color: ${({ isSelected }: { isSelected: boolean }) =>
     isSelected ? colors.light03 : 'inherit'};
