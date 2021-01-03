@@ -19,7 +19,7 @@ export const Controls = ({
     getRandomFromList(currentCity.radio),
   );
   useEffect(() => {
-    setCurrentStation(currentCity.radio[0]);
+    setCurrentStation(getRandomFromList(currentCity.radio));
   }, [currentCity]);
   return (
     <StyledControls>
