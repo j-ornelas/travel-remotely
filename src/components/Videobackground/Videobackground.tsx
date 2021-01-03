@@ -62,7 +62,13 @@ export const Videobackground = () => {
             overflow: 'hidden',
           }}
           config={{
-            youtube: { playerVars: { disablekb: 1, showinfo: 0 } },
+            youtube: {
+              playerVars: {
+                disablekb: 1,
+                showinfo: 0,
+                start: currentVideo.timeStart,
+              },
+            },
             file: {
               attributes: {
                 style: {
