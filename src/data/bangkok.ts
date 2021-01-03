@@ -62,10 +62,10 @@ export const bangkok: City = {
       timeStart: 269,
     },
     {
-      url: 'https://www.youtube.com/watch?v=kooABfHSBdA',
+      url: 'https://www.youtube.com/watch?v=xQDbA2o3je8',
       time: 'day',
       method: 'walk',
-      timeStart: 13,
+      timeStart: 40,
     },
     {
       url: 'https://www.youtube.com/watch?v=R5agTzG9bls',
