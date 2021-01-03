@@ -23,30 +23,34 @@ export const Controls = ({
     getRandomFromList(currentCity.radio),
   );
   useEffect(() => {
-    setCurrentStation(getRandomFromList(currentCity.radio));
+    setCurrentStation(currentCity.radio[0]);
   }, [currentCity]);
   return isVisible ? (
     <StyledControls>
       <div>
         <Header>CITIES:</Header>
-        {cities.map(city => (
-          <Option
-            isSelected={currentCity.name === city.name}
-            onClick={() => updateCity(city.name)}
-          >
-            <Subheader>{city.name}</Subheader>
-          </Option>
-        ))}
+        <Scrollable>
+          {cities.map(city => (
+            <Option
+              isSelected={currentCity.name === city.name}
+              onClick={() => updateCity(city.name)}
+            >
+              <Subheader>{city.name}</Subheader>
+            </Option>
+          ))}
+        </Scrollable>
         <Header>RADIO STATIONS:</Header>
-        {currentCity.radio.map(station => (
-          <Option
-            isSelected={station.name === currentStation.name}
-            onClick={() => setCurrentStation(station)}
-          >
-            <Subheader>{station.name}</Subheader>
-            <div>{station.description}</div>
-          </Option>
-        ))}
+        <Scrollable>
+          {currentCity.radio.map(station => (
+            <Option
+              isSelected={station.name === currentStation.name}
+              onClick={() => setCurrentStation(station)}
+            >
+              <Subheader>{station.name}</Subheader>
+              <div>{station.description}</div>
+            </Option>
+          ))}
+        </Scrollable>
         <Header>OPTIONS:</Header>
         <Subheader>Method:</Subheader>
         <RadioContainer
@@ -163,20 +167,20 @@ export const Controls = ({
 
 const StyledControls = styled.div({
   border: `1px solid ${colors.light02}`,
-  width: '500px',
+  width: '375px',
   borderRadius: '6px',
   padding: '8px',
   paddingBottom: 0,
   position: 'absolute',
-  bottom: 45,
-  right: 45,
+  bottom: 32,
+  right: 32,
   backgroundColor: colors.darker07,
   color: colors.lighter,
 });
 const HiddenContainer = styled.div({
   position: 'absolute',
-  bottom: 60,
-  right: 45,
+  bottom: 43,
+  right: 33,
   padding: '0 8px 0 0',
 });
 const Option = styled.div`
@@ -192,20 +196,20 @@ const Option = styled.div`
   }
 `;
 const Header = styled.div({
-  fontSize: '18px',
+  fontSize: '14px',
   fontWeight: 'bold',
-  paddingTop: '8px',
-  paddingBottom: '8px',
+  paddingTop: '4px',
+  paddingBottom: '4px',
   color: colors.primary,
 });
 const Subheader = styled.div({
   fontWeight: 'bold',
-  paddingBottom: '4px',
-  paddingTop: '4px',
+  paddingBottom: '2px',
+  paddingTop: '2px',
 });
 const RadioContainer = styled.div({
   display: 'flex',
-  padding: '8px',
+  padding: '4px',
 });
 const RadioOption = styled.div({
   width: '25%',
@@ -225,11 +229,15 @@ const LinkRow = styled.div({
   alignItems: 'center',
 });
 const CoffeeButton = styled.img({
-  height: '50px',
-  width: '181px',
+  height: '35px',
+  width: '126.6px',
 });
 const VisibilityContainer = styled.div`
   color: ${({ isVisible }: { isVisible: boolean }) =>
     isVisible ? colors.light09 : colors.light07};
   paddingtop: 4px;
 `;
+const Scrollable = styled.div({
+  maxHeight: '160px',
+  overflowY: 'scroll',
+});
