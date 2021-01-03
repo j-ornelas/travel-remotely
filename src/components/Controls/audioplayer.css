@@ -5,7 +5,7 @@
   line-height: 1;
   font-family: inherit;
   width: 100%;
-  padding: 10px 15px;
+  padding: 4px 8px;
   padding-left: 0;
 }
 .rhap_container:focus:not(:focus-visible) {
@@ -30,7 +30,7 @@
 }
 
 .rhap_stacked .rhap_controls-section {
-  margin-top: 8px;
+  margin-top: 0px;
 }
 
 .rhap_horizontal {

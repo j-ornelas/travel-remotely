@@ -27,9 +27,9 @@ export const Controls = ({
   useEffect(() => {
     setCurrentStation(currentCity.radio[0]);
   }, [currentCity]);
-  return isVisible ? (
+  return (
     <StyledControls>
-      <div>
+      <HidableContent isVisible={isVisible}>
         <Header>CITIES:</Header>
         <Scrollable>
           {cities.map(city => (
@@ -150,43 +150,36 @@ export const Controls = ({
             Off
           </RadioOption>
         </RadioContainer>
-      </div>
-      <AudioPlayer
-        src={currentStation.url}
-        autoPlay={true}
-        showSkipControls={false}
-        showJumpControls={false}
-        showDownloadProgress={false}
-        showFilledProgress={false}
-        autoPlayAfterSrcChange={true}
-      />
+        <LinkRow>
+          <a href="https://www.buymeacoffee.com/johnornelas" target="_blank">
+            <CoffeeButton
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png"
+              alt="Buy Me A Coffee"
+            />
+          </a>
+          <a href={currentVideo.url} target="_blank">
+            original video
+          </a>
+        </LinkRow>
+      </HidableContent>
       <LinkRow>
-        <a href="https://www.buymeacoffee.com/johnornelas" target="_blank">
-          <CoffeeButton
-            src="https://cdn.buymeacoffee.com/buttons/v2/default-blue.png"
-            alt="Buy Me A Coffee"
-          />
-        </a>
-        <a href={currentVideo.url} target="_blank">
-          original video
-        </a>
+        <AudioPlayer
+          src={currentStation.url}
+          autoPlay={true}
+          showSkipControls={false}
+          showJumpControls={false}
+          showDownloadProgress={false}
+          showFilledProgress={false}
+          autoPlayAfterSrcChange={true}
+        />
         <VisibilityContainer
           isVisible={isVisible}
-          onClick={() => setIsVisible(false)}
+          onClick={() => setIsVisible(!isVisible)}
         >
-          <VisibilityOff />
+          {isVisible ? <VisibilityOff /> : <Visibility />}
         </VisibilityContainer>
       </LinkRow>
     </StyledControls>
-  ) : (
-    <HiddenContainer>
-      <VisibilityContainer
-        onClick={() => setIsVisible(true)}
-        isVisible={isVisible}
-      >
-        <Visibility />
-      </VisibilityContainer>
-    </HiddenContainer>
   );
 };
 
@@ -195,18 +188,11 @@ const StyledControls = styled.div({
   width: '375px',
   borderRadius: '6px',
   padding: '8px',
-  paddingBottom: 0,
   position: 'absolute',
   bottom: 32,
   right: 32,
   backgroundColor: colors.darker07,
   color: colors.lighter,
-});
-const HiddenContainer = styled.div({
-  position: 'absolute',
-  bottom: 43,
-  right: 33,
-  padding: '0 8px 0 0',
 });
 const Option = styled.div`
   padding: 8px;
@@ -241,8 +227,8 @@ const RadioOption = styled.div({
 });
 const LinkRow = styled.div({
   display: 'flex',
-  paddingTop: '4px',
-  paddingBottom: '4px',
+  paddingTop: '8px',
+  paddingBottom: '8px',
   color: `${colors.lighter01} !important`,
   'a:link': {
     color: colors.lighter09,
@@ -266,3 +252,7 @@ const Scrollable = styled.div({
   maxHeight: '160px',
   overflowY: 'scroll',
 });
+const HidableContent = styled.div`
+  display: ${({ isVisible }: { isVisible: boolean }) =>
+    isVisible ? 'inherit' : 'none'};
+`;
