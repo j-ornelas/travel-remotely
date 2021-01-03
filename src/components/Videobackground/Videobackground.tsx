@@ -6,15 +6,6 @@ import { cities } from '../../data/cities';
 import Controls from '../Controls';
 import { getRandomFromList } from '../../utils/getRandomFromList';
 
-const StyledVideo = styled.div({
-  height: '100vh', // TODO: remove
-  width: '100vw',
-  position: 'relative',
-});
-const VideoContainer = styled.div({
-  pointerEvents: 'none', // TODO: we may remove this once we hide share/more
-});
-
 export interface VideoOptions {
   time: string;
   method: any;
@@ -58,11 +49,31 @@ export const Videobackground = () => {
         <ReactPlayer
           url={currentVideo.url}
           controls={false}
-          height="100vh"
-          width="100vw"
+          height="115%"
+          width="115%"
           muted={true}
           playing={true}
-          config={{ youtube: { playerVars: { disablekb: 1, showinfo: 0 } } }}
+          style={{
+            height: '120%',
+            width: '110%',
+            position: 'absolute',
+            top: -50,
+            left: -100,
+            overflow: 'hidden',
+          }}
+          config={{
+            youtube: { playerVars: { disablekb: 1, showinfo: 0 } },
+            file: {
+              attributes: {
+                style: {
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  overflow: 'hidden',
+                },
+              },
+            },
+          }}
         />
       </VideoContainer>
       <Controls
@@ -74,3 +85,14 @@ export const Videobackground = () => {
     </StyledVideo>
   );
 };
+
+const StyledVideo = styled.div({
+  height: '100vh',
+  overflow: 'hidden',
+});
+const VideoContainer = styled.div({
+  pointerEvents: 'none', // TODO: we may remove this once we hide share/more    position: "relative",
+  position: 'relative',
+  overflow: 'hidden',
+  height: '100%',
+});
