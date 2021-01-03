@@ -17,6 +17,8 @@ export const Controls = ({
   options,
   updateCity,
   updateOptions,
+  isMuted,
+  setIsMuted,
 }: ControlsProps) => {
   const [isVisible, setIsVisible] = useState(true);
   const [currentStation, setCurrentStation] = useState<RadioStation>(
@@ -127,14 +129,14 @@ export const Controls = ({
         </RadioContainer>
         <Subheader>Street Noise:</Subheader>
         <RadioContainer
-          onChange={(e: any) => updateOptions('streetNoise', e.target.value)}
+          onChange={(e: any) => setIsMuted(e.target.value === 'off')}
         >
           <RadioOption>
             <input
               type="radio"
               value="on"
               name="streetNoise"
-              checked={options.streetNoise === 'on'}
+              checked={!isMuted}
             />
             On
           </RadioOption>
@@ -143,7 +145,7 @@ export const Controls = ({
               type="radio"
               value="off"
               name="streetNoise"
-              checked={options.streetNoise === 'off'}
+              checked={isMuted}
             />
             Off
           </RadioOption>

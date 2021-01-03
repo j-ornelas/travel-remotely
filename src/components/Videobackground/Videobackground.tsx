@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ReactPlayer from 'react-player';
 import styled from '@emotion/styled';
 
@@ -10,12 +10,10 @@ import { getRandomFromList } from '../../utils/getRandomFromList';
 export interface VideoOptions {
   time: string;
   method: any;
-  streetNoise: string;
 }
 const _default_options: VideoOptions = {
   time: 'any', // any, day, night
   method: 'walk', // any, train, car, walk
-  streetNoise: 'off', // ambient street noise - off/on
 };
 
 const filterVideos = (videos: Video[], options: VideoOptions) => {
@@ -34,6 +32,7 @@ const filterVideos = (videos: Video[], options: VideoOptions) => {
 
 export const Videobackground = () => {
   const [currentCity, setCurrentCity] = useState(cities[0]);
+  const [isMuted, setIsMuted] = useState(true);
   const [videoOptions, setVideoOptions] = useState<VideoOptions>(
     _default_options,
   );
@@ -52,8 +51,13 @@ export const Videobackground = () => {
     setCurrentVideo(
       getRandomFromList(filterVideos(targetCity.videos, videoOptions)),
     );
-    return setCurrentCity(targetCity);
+    setCurrentCity(targetCity);
   };
+  useEffect(() => {
+    setCurrentVideo(
+      getRandomFromList(filterVideos(currentCity.videos, videoOptions)),
+    );
+  }, [videoOptions]);
   return (
     <StyledVideo>
       <VideoContainer>
@@ -62,7 +66,7 @@ export const Videobackground = () => {
           controls={false}
           height="115%"
           width="115%"
-          muted={videoOptions.streetNoise === 'off'}
+          muted={isMuted}
           playing={true}
           style={{
             height: '120%',
@@ -99,6 +103,8 @@ export const Videobackground = () => {
         updateCity={updateCityByName}
         currentCity={currentCity}
         currentVideo={currentVideo}
+        isMuted={isMuted}
+        setIsMuted={setIsMuted}
       />
     </StyledVideo>
   );

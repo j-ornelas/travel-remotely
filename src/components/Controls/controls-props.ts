@@ -7,4 +7,6 @@ export interface ControlsProps {
   updateOptions: Function;
   currentCity: City;
   currentVideo: Video;
+  isMuted: boolean;
+  setIsMuted: Function;
 }
