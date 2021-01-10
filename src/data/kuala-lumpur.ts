@@ -4,9 +4,34 @@ export const kualaLumpur: City = {
   name: 'Kuala Lumpur',
   radio: [
     {
-      url: '',
-      name: '',
-      description: '',
+      url: 'https://astro1.rastream.com/melody',
+      name: 'Melody',
+      description: 'Asian Hits',
+    },
+    {
+      url: 'https://astro4.rastream.com/jazz',
+      name: 'Jazz Radio Malaysia',
+      description: 'Jazz',
+    },
+    {
+      url: 'https://astro1.rastream.com/myfm',
+      name: 'MY',
+      description: 'Local Hits',
+    },
+    {
+      url: 'https://astro4.rastream.com/opus',
+      name: 'Opus',
+      description: 'Classical',
+    },
+    {
+      url: 'https://astro1.rastream.com/hitz',
+      name: 'Hitz',
+      description: 'Pop, Hits',
+    },
+    {
+      url: 'https://astro3.rastream.com/gegar?type=mp3',
+      name: 'Gegar',
+      description: 'Malaysia Hits',
     },
   ],
   videos: [
