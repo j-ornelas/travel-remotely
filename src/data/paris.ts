@@ -85,5 +85,35 @@ export const paris: City = {
       time: 'night',
       timeStart: 40,
     },
+    {
+      url: 'https://www.youtube.com/watch?v=gz_HbOwLkM0',
+      method: 'walk',
+      time: 'day',
+      timeStart: 10,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=FkEBncs-yiU',
+      method: 'walk',
+      time: 'day',
+      timeStart: 167,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=JdPkO2iIvfg',
+      method: 'walk',
+      time: 'day',
+      timeStart: 28,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=cxDvgdKErqY',
+      method: 'walk',
+      time: 'day',
+      timeStart: 43,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=M8eq_kVGc1w',
+      method: 'walk',
+      time: 'night',
+      timeStart: 53,
+    },
   ],
 };
