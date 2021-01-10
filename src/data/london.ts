@@ -53,6 +53,12 @@ export const london: City = {
       timeStart: 187,
     },
     {
+      url: 'https://www.youtube.com/watch?v=EJpKDAJcnHE',
+      time: 'night',
+      method: 'walk',
+      timeStart: 18,
+    },
+    {
       url: 'https://www.youtube.com/watch?v=E2sSvVCRI4s',
       time: 'night',
       method: 'walk',

@@ -1,0 +1,206 @@
+import { City } from './dataTypes';
+
+export const newyorkcity: City = {
+  name: 'New York City',
+  radio: [
+    {
+      url: 'https://fm939.wnyc.org/wnycfm-web?nyprBrowserId=5a645ea305fc4c00',
+      name: 'WNYC',
+      description: 'New York Public Radio',
+    },
+    {
+      url: 'https://streaming.radiostreamlive.com/radionylive_devices',
+      name: 'Radio New York Live',
+      description: 'Hits from Today, 80s, 90s, 00s',
+    },
+    {
+      url: 'https://wbgo.streamguys1.com/wbgo128',
+      name: 'WBGO',
+      description: 'NYC Jazz',
+    },
+    {
+      url: 'https://live.powerhitz.com/hot108?aw_0_req.gdpr=true',
+      name: 'Hot 108 Jamz',
+      description: 'Rap, Hiphop',
+    },
+    {
+      url: 'https://stream2.friskyradio.com/frisky_mp3_hi',
+      name: 'Frisky Radio',
+      description: 'Dance, Electro',
+    },
+    {
+      url: 'https://18593.live.streamtheworld.com/WFANAM.mp3',
+      name: 'WFAN 66 AM',
+      description: 'Sports Talk Radio',
+    },
+    {
+      url: 'https://wrau.streamguys1.com/msnbc-free',
+      name: 'MSNBC',
+      description: 'News / Talk',
+    },
+  ],
+  videos: [
+    {
+      url: 'https://www.youtube.com/watch?v=-IpXdtWfneI',
+      time: 'day',
+      method: 'walk',
+      timeStart: 56,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=eZe4Q_58UTU',
+      time: 'day',
+      method: 'walk',
+      timeStart: 17,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=BOa0zQBRs_M',
+      time: 'night',
+      method: 'walk',
+      timeStart: 27,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=PEhKhACVfaA',
+      time: 'night',
+      method: 'walk',
+      timeStart: 65,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=vd205Q_EE18',
+      time: 'night',
+      method: 'walk',
+      timeStart: 45,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=mECvsV-Ah_8',
+      time: 'night',
+      method: 'walk',
+      timeStart: 38,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=L_mlofcsRaA',
+      time: 'night',
+      method: 'walk',
+      timeStart: 3,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=4WcMFwU6EpE',
+      time: 'day',
+      method: 'walk',
+      timeStart: 35,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=21HKaqA1rpo',
+      time: 'night',
+      method: 'walk',
+      timeStart: 38,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=Abq0eEDfyow',
+      time: 'day',
+      method: 'walk',
+      timeStart: 9,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=7JsOhtl_zG4',
+      time: 'day',
+      method: 'walk',
+      timeStart: 37,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=H98yxzcnjxE',
+      time: 'day',
+      method: 'walk',
+      timeStart: 13,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=7HaJArMDKgI',
+      time: 'day',
+      method: 'car',
+      timeStart: 5,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=n1xkO0_lSU0',
+      time: 'night',
+      method: 'car',
+      timeStart: 38,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=roFulKBvnHM',
+      time: 'night',
+      method: 'car',
+      timeStart: 9,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=RTLwaQFtXbE',
+      time: 'night',
+      method: 'car',
+      timeStart: 44,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=6uu9EwoWxo4',
+      time: 'day',
+      method: 'car',
+      timeStart: 23,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=R_XfeQZDWqI',
+      time: 'day',
+      method: 'car',
+      timeStart: 7,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=ZvHXpd9uzN4',
+      time: 'day',
+      method: 'car',
+      timeStart: 52,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=ukOHqdPbYYg',
+      time: 'day',
+      method: 'train',
+      timeStart: 59,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=jLVXBeVvp9g',
+      time: 'day',
+      method: 'train',
+      timeStart: 13,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=jLVXBeVvp9g',
+      time: 'day',
+      method: 'train',
+      timeStart: 1,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=pphgq49lslI',
+      time: 'day',
+      method: 'train',
+      timeStart: 202,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=pphgq49lslI',
+      time: 'night',
+      method: 'train',
+      timeStart: 2076,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=6Ruc8g-5qFM',
+      time: 'day',
+      method: 'train',
+      timeStart: 56,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=0c4lEX4cEUw',
+      time: 'day',
+      method: 'train',
+      timeStart: 16,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=0c4lEX4cEUw',
+      time: 'night',
+      method: 'train',
+      timeStart: 16,
+    },
+  ],
+};
