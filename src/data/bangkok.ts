@@ -4,14 +4,14 @@ export const bangkok: City = {
   name: 'Bangkok',
   radio: [
     {
-      url: 'http://fmone.plathong.net:7010/;stream.mp3',
-      name: 'FM One',
-      description: 'Dance, Hiphop, Electronic',
-    },
-    {
       url: 'https://coolism-web.cdn.byteark.com/;stream/1',
       name: 'COOL Faranheit 93',
       description: 'Asian Music, Pop',
+    },
+    {
+      url: 'http://fmone.plathong.net:7010/;stream.mp3',
+      name: 'FM One',
+      description: 'Dance, Hiphop, Electronic',
     },
     {
       url: 'https://radio14.plathong.net/7126/stream/1/',

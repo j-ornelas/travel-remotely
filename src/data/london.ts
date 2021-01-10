@@ -1,30 +1,29 @@
 import { City } from './dataTypes';
-// good source: https://www.youtube.com/c/watchedwalker/videos
-// https://www.youtube.com/channel/UCBcVQr-07MH-p9e2kRTdB3A/videos
 
 export const london: City = {
   name: 'London',
   radio: [
-    {
-      url: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1_mf_p',
-      name: 'BBC Radio 1',
-      description: 'Popular, Top 40, Charts',
-    },
-    {
-      url: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio2_mf_p',
-      name: 'BBC Radio 2',
-      description: 'Variety',
-    },
-    {
-      url: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p',
-      name: 'BBC Radio 3',
-      description: 'World, Jazz, Classical',
-    },
-    {
-      url: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1xtra_mf_p',
-      name: '1Xtra',
-      description: 'HipHop, R&B, Soul',
-    },
+    // {
+    //   url:
+    //     'https://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/dash/nonuk/dash_low/aks/bbc_radio_one.mpd',
+    //   name: 'BBC Radio 1',
+    //   description: 'Popular, Top 40, Charts',
+    // },
+    // {
+    //   url: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio2_mf_p',
+    //   name: 'BBC Radio 2',
+    //   description: 'Variety',
+    // },
+    // {
+    //   url: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p',
+    //   name: 'BBC Radio 3',
+    //   description: 'World, Jazz, Classical',
+    // },
+    // {
+    //   url: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1xtra_mf_p',
+    //   name: '1Xtra',
+    //   description: 'HipHop, R&B, Soul',
+    // },
     {
       url: 'https://media-ssl.musicradio.com/RadioXLondon',
       name: 'Radio X London',
