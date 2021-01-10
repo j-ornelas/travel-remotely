@@ -31,6 +31,60 @@ export const sanfrancisco: City = {
   ],
   videos: [
     {
+      url: 'https://www.youtube.com/watch?v=AIqlkQlIzCY',
+      timeStart: 44,
+      time: 'day',
+      method: 'walk',
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=Pe93RBoYf_A',
+      timeStart: 32,
+      time: 'day',
+      method: 'walk',
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=kCToauX3iq8',
+      timeStart: 23,
+      time: 'day',
+      method: 'walk',
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=hamFV1rwJxo',
+      timeStart: 12,
+      time: 'day',
+      method: 'walk',
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=U5I0o2JTtug',
+      timeStart: 22,
+      time: 'day',
+      method: 'walk',
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=zt4sWtdOthU',
+      timeStart: 22,
+      time: 'day',
+      method: 'walk',
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=6bPl-NsgOlE',
+      timeStart: 7,
+      time: 'day',
+      method: 'walk',
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=foNrEziPcNw',
+      timeStart: 410,
+      time: 'night',
+      method: 'walk',
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=4MGnF2i0dLc',
+      timeStart: 81,
+      time: 'day',
+      method: 'walk',
+    },
+    {
       url: 'https://www.youtube.com/watch?v=l72z2l_1h9A',
       timeStart: 24,
       time: 'day',
