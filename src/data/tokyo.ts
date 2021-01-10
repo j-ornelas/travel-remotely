@@ -17,6 +17,12 @@ export const tokyo: City = {
       method: 'car',
     },
     {
+      url: 'https://www.youtube.com/watch?v=Hndf5JRwUL0',
+      timeStart: 58,
+      time: 'night',
+      method: 'walk',
+    },
+    {
       url: 'https://www.youtube.com/watch?v=2PqkuJMbHaw',
       timeStart: 0,
       time: 'night',
