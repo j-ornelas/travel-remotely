@@ -97,5 +97,35 @@ export const bangkok: City = {
       method: 'car',
       timeStart: 30,
     },
+    {
+      url: 'https://www.youtube.com/watch?v=SrnrSk79hbo',
+      time: 'night',
+      method: 'walk',
+      timeStart: 47,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=REIOjOfBd7w',
+      time: 'day',
+      method: 'walk',
+      timeStart: 109,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=JHYuGElmwFU',
+      time: 'night',
+      method: 'walk',
+      timeStart: 23,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=yBhAw-2oOFg',
+      time: 'day',
+      method: 'walk',
+      timeStart: 1,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=8l5JuqTvho4',
+      time: 'night',
+      method: 'walk',
+      timeStart: 61,
+    },
   ],
 };
