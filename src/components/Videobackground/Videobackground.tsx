@@ -31,13 +31,13 @@ const filterVideos = (videos: Video[], options: VideoOptions) => {
 };
 
 export const Videobackground = () => {
-  const [currentCity, setCurrentCity] = useState(cities[0]);
-  const [isMuted, setIsMuted] = useState(true);
+  const [currentCity, setCurrentCity] = useState(getRandomFromList(cities));
+  const [streetVolume, setStreetVolume] = useState(0); // 0-100, 0: muted, 100: max volume;
   const [videoOptions, setVideoOptions] = useState<VideoOptions>(
     _default_options,
   );
   const [currentVideo, setCurrentVideo] = useState(
-    // can give users option to set current video?
+    // can give users option to set current video by url?
     getRandomFromList(filterVideos(currentCity.videos, videoOptions)),
   );
   const updateOptionsByProp = (prop: string, value: string) => {
@@ -66,7 +66,8 @@ export const Videobackground = () => {
           controls={false}
           height="115%"
           width="115%"
-          muted={isMuted}
+          muted={streetVolume === 0}
+          volume={streetVolume / 100}
           playing={true}
           style={{
             height: '120%',
@@ -95,6 +96,11 @@ export const Videobackground = () => {
               },
             },
           }}
+          onEnded={() =>
+            setCurrentVideo(
+              getRandomFromList(filterVideos(currentCity.videos, videoOptions)),
+            )
+          }
         />
       </VideoContainer>
       <Controls
@@ -103,8 +109,8 @@ export const Videobackground = () => {
         updateCity={updateCityByName}
         currentCity={currentCity}
         currentVideo={currentVideo}
-        isMuted={isMuted}
-        setIsMuted={setIsMuted}
+        streetVolume={streetVolume}
+        setStreetVolume={setStreetVolume}
       />
     </StyledVideo>
   );
