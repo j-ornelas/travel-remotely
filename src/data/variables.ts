@@ -1,5 +1,6 @@
 export const times = ['day', 'night'];
 export const methods = ['car', 'walk', 'train'];
+export const requiredMethods = ['car', 'walk'];
 // generated from: https://coolors.co/f7c59f-2a324b-767b91-c7ccdb-e1e5ee
 export const colors = {
   primary: 'rgba(247, 197, 159, 1)',
