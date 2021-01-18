@@ -36,6 +36,14 @@ export const Controls = ({
     // reset radio status when radio station is changed
     setAudioStatus(_default_audio_status);
   }, [currentStation]);
+  const hasTrainVideos =
+    currentCity.videos.filter(video => video.method === 'train').length > 0;
+  useEffect(() => {
+    // reset method if currentMethod doesn't exist when city changes.
+    if (!hasTrainVideos && options.method === 'train') {
+      updateOptions('method', 'any');
+    }
+  }, [currentCity]);
   return (
     <StyledControls>
       <HidableContent isVisible={isVisible}>
@@ -88,6 +96,7 @@ export const Controls = ({
           </RadioOption>
           <RadioOption>
             <input
+              disabled={!hasTrainVideos}
               type="radio"
               value="train"
               name="method"

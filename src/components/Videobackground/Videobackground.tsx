@@ -17,7 +17,7 @@ const _default_options: VideoOptions = {
 };
 
 const filterVideos = (videos: Video[], options: VideoOptions) => {
-  return videos.filter(video => {
+  const filteredVideos = videos.filter(video => {
     let timeFlag = true;
     let methodFlag = true;
     if (options.time !== 'any') {
@@ -28,6 +28,7 @@ const filterVideos = (videos: Video[], options: VideoOptions) => {
     }
     return timeFlag && methodFlag;
   });
+  return filteredVideos.length ? filteredVideos : videos;
 };
 
 export const Videobackground = () => {
