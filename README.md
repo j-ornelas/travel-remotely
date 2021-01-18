@@ -1,6 +1,11 @@
-# Travel From Home
+# Travel From Home (Travel Remotely)
 
 Static web application that lets you travel by foot, car, or train in cities around the world while listening to local radio.
+
+## Requirements
+
+- Node / npm
+- [Netlify CLI](https://cli.netlify.com/) (deployment only)
 
 ## Available Scripts
 
@@ -11,20 +16,21 @@ In the project directory, you can run:
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
 ### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Launches a test suite. Notably, this also includes a suite of video stability checks, making sure that all videos in the catalogue exist and that each city has at least one video of each type needed to run the site. Use this after adding new cities to the catalogue to prevent issues on the site.
 
 ### `npm build`
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When you're ready to deploy your local changes to netlify, follow these steps:
+
+- `npm run build`
+- `netlify deploy` (when prompted for the build folder, enter 'build')
+- Check website draft URL to visually verify changes
+- If everything looks good: `netlify deploy --prod`
+- If something is wrong, fix the code and start this process over.
