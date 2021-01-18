@@ -1,14 +1,15 @@
-import { bangkok } from './bangkok';
 import { dubai } from './dubai';
-import { istanbul } from './istanbul';
-import { kualaLumpur } from './kuala-lumpur';
-import { lasVegas } from './lasvegas';
-import { london } from './london';
-import { newyorkcity } from './newyorkcity';
 import { paris } from './paris';
-import { sanfrancisco } from './sanfrancisco';
-import { singapore } from './singapore';
+import { seoul } from './seoul';
 import { tokyo } from './tokyo';
+import { london } from './london';
+import { bangkok } from './bangkok';
+import { istanbul } from './istanbul';
+import { lasVegas } from './lasvegas';
+import { singapore } from './singapore';
+import { newyorkcity } from './newyorkcity';
+import { kualaLumpur } from './kuala-lumpur';
+import { sanfrancisco } from './sanfrancisco';
 
 export const cities = [
   bangkok,
@@ -20,6 +21,7 @@ export const cities = [
   newyorkcity,
   paris,
   sanfrancisco,
+  seoul,
   singapore,
   tokyo,
 ];

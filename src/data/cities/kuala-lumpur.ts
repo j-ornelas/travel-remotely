@@ -1,4 +1,4 @@
-import { City } from './dataTypes';
+import { City } from '../dataTypes';
 
 export const kualaLumpur: City = {
   name: 'Kuala Lumpur',

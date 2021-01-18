@@ -1,7 +1,7 @@
 import '@testing-library/react';
 
-import { requiredMethods, times } from './variables';
-import { cities } from './cities';
+import { requiredMethods, times } from '../variables';
+import { cities } from '../cities';
 
 test('each city contains at least 1 of each required method', () => {
   let meetsStandards = true;

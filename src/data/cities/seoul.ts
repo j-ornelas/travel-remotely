@@ -1,0 +1,185 @@
+import { City } from '../dataTypes';
+
+export const seoul: City = {
+  name: 'Seoul',
+  radio: [
+    {
+      url: 'http://plive.podbbang.com/mapofm_app.mp3',
+      name: 'Mapo FM',
+      description: 'Community Radio Broadcasting for Mapo-dong',
+    },
+    {
+      url: 'https://streamer.radio.co/s06b196587/listen',
+      name: 'Kpopway Radio',
+      description: 'K-Pop, Contemporary, Dance',
+    },
+    {
+      url: 'http://c8.inlive.co.kr:2790/;',
+      name: 'Jazz Break',
+      description: 'Blues, Jazz',
+    },
+    {
+      url: 'http://192.99.14.225:9962/;',
+      name: 'Generation Kpop',
+      description: 'K-Pop, Club Hits',
+    },
+  ],
+  videos: [
+    {
+      url: 'https://www.youtube.com/watch?v=XumWx48Hnt0',
+      method: 'walk',
+      time: 'night',
+      timeStart: 300,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=YsFQaZpqCXI',
+      method: 'walk',
+      time: 'night',
+      timeStart: 30,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=w-m4UON2Hlk',
+      method: 'walk',
+      time: 'day',
+      timeStart: 20,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=Pcn3rHNI1Y0',
+      method: 'walk',
+      time: 'day',
+      timeStart: 78,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=VsdxxaHfsy0',
+      method: 'walk',
+      time: 'night',
+      timeStart: 78,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=NwcbLH0V590',
+      method: 'walk',
+      time: 'day',
+      timeStart: 45,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=5i4Y4pZCVJM',
+      method: 'walk',
+      time: 'day',
+      timeStart: 50,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=5i4Y4pZCVJM',
+      method: 'walk',
+      time: 'night',
+      timeStart: 744,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=I0B21LjeSUQ',
+      method: 'walk',
+      time: 'night',
+      timeStart: 120,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=fPTNnI1rPyc',
+      method: 'walk',
+      time: 'night',
+      timeStart: 194,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=SPghJ4anZBI',
+      method: 'walk',
+      time: 'day',
+      timeStart: 19,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=qNjv2miGW9Y',
+      method: 'walk',
+      time: 'night',
+      timeStart: 62,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=NptLC2n0aPE',
+      method: 'walk',
+      time: 'night',
+      timeStart: 13,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=AoI7j5QzdAQ',
+      method: 'walk',
+      time: 'day',
+      timeStart: 5,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=d7SHqhQ82OQ',
+      method: 'car',
+      time: 'night',
+      timeStart: 1,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=8e6RWrAlafs',
+      method: 'car',
+      time: 'day',
+      timeStart: 48,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=4Bh5XgpQY4c',
+      method: 'car',
+      time: 'night',
+      timeStart: 27,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=hy5BJ5ICrao',
+      method: 'car',
+      time: 'day',
+      timeStart: 76,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=yey4ppI6qVY',
+      method: 'car',
+      time: 'day',
+      timeStart: 91,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=xnkelvJY6pg',
+      method: 'car',
+      time: 'day',
+      timeStart: 16,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=xnkelvJY6pg',
+      method: 'car',
+      time: 'night',
+      timeStart: 4980,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=iLhlBLfmSmk',
+      method: 'train',
+      time: 'night',
+      timeStart: 6,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=kdQhvbTidFg',
+      method: 'train',
+      time: 'day',
+      timeStart: 382,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=XdvEwS3UKZE',
+      method: 'train',
+      time: 'day',
+      timeStart: 60,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=LWp1pVFkMyY',
+      method: 'walk',
+      time: 'day',
+      timeStart: 38,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=cbTV35mLI5A',
+      method: 'walk',
+      time: 'night',
+      timeStart: 32,
+    },
+  ],
+};
