@@ -4,9 +4,9 @@ export const seoul: City = {
   name: 'Seoul',
   radio: [
     {
-      url: 'http://plive.podbbang.com/mapofm_app.mp3',
-      name: 'Mapo FM',
-      description: 'Community Radio Broadcasting for Mapo-dong',
+      url: 'https://listen.moe/kpop/stream',
+      name: 'Moe Kpop',
+      description: 'K-pop, Korean Charts, Hits',
     },
     {
       url: 'https://streamer.radio.co/s06b196587/listen',
@@ -14,14 +14,9 @@ export const seoul: City = {
       description: 'K-Pop, Contemporary, Dance',
     },
     {
-      url: 'http://c8.inlive.co.kr:2790/;',
-      name: 'Jazz Break',
-      description: 'Blues, Jazz',
-    },
-    {
-      url: 'http://192.99.14.225:9962/;',
-      name: 'Generation Kpop',
-      description: 'K-Pop, Club Hits',
+      url: 'https://streaming.radionomy.com/JamendoLounge',
+      name: 'Korea FM 1',
+      description: 'Talk Radio, Music, Podcasts, Traditional Korean',
     },
   ],
   videos: [
