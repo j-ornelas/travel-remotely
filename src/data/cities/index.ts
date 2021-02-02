@@ -1,3 +1,4 @@
+import { rome } from './rome';
 import { dubai } from './dubai';
 import { paris } from './paris';
 import { seoul } from './seoul';
@@ -22,6 +23,7 @@ export const cities = [
   london,
   newyorkcity,
   paris,
+  rome,
   sanfrancisco,
   seoul,
   singapore,
