@@ -6,6 +6,7 @@ import { london } from './london';
 import { bangkok } from './bangkok';
 import { istanbul } from './istanbul';
 import { lasVegas } from './lasvegas';
+import { hongKong } from './hong-kong';
 import { singapore } from './singapore';
 import { newyorkcity } from './newyorkcity';
 import { kualaLumpur } from './kuala-lumpur';
@@ -14,6 +15,7 @@ import { sanfrancisco } from './sanfrancisco';
 export const cities = [
   bangkok,
   dubai,
+  hongKong,
   istanbul,
   kualaLumpur,
   lasVegas,

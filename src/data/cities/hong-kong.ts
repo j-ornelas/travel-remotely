@@ -1,0 +1,170 @@
+import { City } from '../dataTypes';
+
+export const hongKong: City = {
+  name: 'Hong Kong',
+  radio: [
+    {
+      url: 'https://cdn.istoikona.com/ccnradio/ccnradio/icecast.audio',
+      name: 'CCN',
+      description: 'Chinese Music',
+    },
+  ],
+  videos: [
+    {
+      url: 'https://www.youtube.com/watch?v=hJP8cdGNk_M',
+      method: 'walk',
+      time: 'day',
+      timeStart: 14,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=oAkCZbmFsU4',
+      method: 'walk',
+      time: 'day',
+      timeStart: 27,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=k8XyxasuTGw',
+      method: 'walk',
+      time: 'day',
+      timeStart: 38,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=PT-ar5r21ZU',
+      method: 'walk',
+      time: 'day',
+      timeStart: 35,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=yVsFZ4xOQTo',
+      method: 'walk',
+      time: 'day',
+      timeStart: 47,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=-BEeixNrWtc',
+      method: 'walk',
+      time: 'day',
+      timeStart: 44,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=4sTWvBOmPY0',
+      method: 'walk',
+      time: 'day',
+      timeStart: 132,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=_au6W8bKXEg',
+      method: 'walk',
+      time: 'day',
+      timeStart: 21,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=UPmgo3ODvec',
+      method: 'walk',
+      time: 'night',
+      timeStart: 177,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=h-tk7l-zVjg',
+      method: 'walk',
+      time: 'night',
+      timeStart: 180,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=UD7Nn1G7BQI',
+      method: 'walk',
+      time: 'night',
+      timeStart: 111,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=AL6VnQo9moY',
+      method: 'walk',
+      time: 'night',
+      timeStart: 8,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=PRBIYjljso0',
+      method: 'walk',
+      time: 'day',
+      timeStart: 48,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=pnw9sts6Tlw',
+      method: 'walk',
+      time: 'night',
+      timeStart: 100,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=ULcuZ3Q02SI',
+      method: 'car',
+      time: 'day',
+      timeStart: 33,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=ULcuZ3Q02SI',
+      method: 'car',
+      time: 'day',
+      timeStart: 33,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=-OgNLo21j3k',
+      method: 'car',
+      time: 'day',
+      timeStart: 2,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=Tu4793jUYX4',
+      method: 'car',
+      time: 'day',
+      timeStart: 2,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=XaR6qEt-BIY',
+      method: 'car',
+      time: 'night',
+      timeStart: 38,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=aM7sMGc-ox4',
+      method: 'car',
+      time: 'day',
+      timeStart: 1,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=V8nBZbbJePs',
+      method: 'car',
+      time: 'day',
+      timeStart: 29,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=3N9lWOMkZOY',
+      method: 'car',
+      time: 'night',
+      timeStart: 240,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=2udiLsIlxls',
+      method: 'train',
+      time: 'night',
+      timeStart: 19,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=vUx_h8WTc6M',
+      method: 'train',
+      time: 'night',
+      timeStart: 220,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=pm54y-6CEBk',
+      method: 'train',
+      time: 'day',
+      timeStart: 78,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=pm54y-6CEBk',
+      method: 'train',
+      time: 'day',
+      timeStart: 78,
+    },
+  ],
+};
