@@ -8,6 +8,16 @@ export const hongKong: City = {
       name: 'CCN',
       description: 'Chinese Music',
     },
+    {
+      url: 'https://c16.radioboss.fm:18115/stream',
+      name: '973 FM',
+      description: 'Dance',
+    },
+    {
+      url: 'http://fmone.plathong.net:7010/;stream.mp3',
+      name: 'FM One',
+      description: 'Dance, Hiphop, Electronic',
+    },
   ],
   videos: [
     {
