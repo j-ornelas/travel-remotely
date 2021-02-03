@@ -3,27 +3,6 @@ import { City } from '../dataTypes';
 export const london: City = {
   name: 'London',
   radio: [
-    // {
-    //   url:
-    //     'https://a.files.bbci.co.uk/media/live/manifesto/audio/simulcast/dash/nonuk/dash_low/aks/bbc_radio_one.mpd',
-    //   name: 'BBC Radio 1',
-    //   description: 'Popular, Top 40, Charts',
-    // },
-    // {
-    //   url: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio2_mf_p',
-    //   name: 'BBC Radio 2',
-    //   description: 'Variety',
-    // },
-    // {
-    //   url: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio3_mf_p',
-    //   name: 'BBC Radio 3',
-    //   description: 'World, Jazz, Classical',
-    // },
-    // {
-    //   url: 'http://bbcmedia.ic.llnwd.net/stream/bbcmedia_radio1xtra_mf_p',
-    //   name: '1Xtra',
-    //   description: 'HipHop, R&B, Soul',
-    // },
     {
       url: 'https://media-ssl.musicradio.com/RadioXLondon',
       name: 'Radio X London',

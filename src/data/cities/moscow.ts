@@ -1,0 +1,202 @@
+import { City } from '../dataTypes';
+
+export const moscow: City = {
+  name: 'Moscow',
+  radio: [
+    {
+      url: 'https://rusradio.hostingradio.ru/rusradio96.aacp',
+      name: 'Russkoe Radio Русское Радио',
+      description: 'Russian Pop, Trendy',
+    },
+    {
+      url: 'https://listen.rusongs.ru/ru-aac-64',
+      name: 'Русские Песни',
+      description: 'Popular Russian, Classics',
+    },
+    {
+      url: 'http://ic4.101.ru:8000/stream/air/aac/64/102',
+      name: 'Humor FM',
+      description: 'Comedy, Talk',
+    },
+    {
+      url: 'https://ic7.101.ru:8000/a200',
+      name: 'Relax 90.8 FM - Moscow',
+      description: 'Relaxing, Ambient',
+    },
+    {
+      url: 'https://ep256.hostingradio.ru:8052/europaplus256.mp3',
+      name: 'Europa Plus RU',
+      description: 'Pop, Trendy',
+    },
+  ],
+  videos: [
+    {
+      url: 'https://www.youtube.com/watch?v=wi_3WwCvzo8',
+      time: 'day',
+      method: 'walk',
+      timeStart: 52,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=2l5XPZK-55g',
+      time: 'day',
+      method: 'walk',
+      timeStart: 270,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=aSyipwo0BzA',
+      time: 'day',
+      method: 'walk',
+      timeStart: 47,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=8QRpsVirH5U',
+      time: 'night',
+      method: 'walk',
+      timeStart: 120,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=W52KiKLMds4',
+      time: 'night',
+      method: 'walk',
+      timeStart: 791,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=Q2z-QnqXgyE',
+      time: 'day',
+      method: 'walk',
+      timeStart: 71,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=OPSXYOf1U7I',
+      time: 'night',
+      method: 'walk',
+      timeStart: 19,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=5KSHj0JBa-4',
+      time: 'night',
+      method: 'walk',
+      timeStart: 47,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=CxXjIv7rDig',
+      time: 'day',
+      method: 'walk',
+      timeStart: 16,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=Lo_Xm4dTCRk',
+      time: 'night',
+      method: 'walk',
+      timeStart: 27,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=b0RVfAFap68',
+      time: 'day',
+      method: 'walk',
+      timeStart: 174,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=7isPVnfYAb0',
+      time: 'day',
+      method: 'walk',
+      timeStart: 1980,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=4INuAH7aZj4',
+      time: 'day',
+      method: 'walk',
+      timeStart: 1140,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=bf0_fi2yqLk',
+      time: 'day',
+      method: 'walk',
+      timeStart: 9,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=nfXRbtAjZvY',
+      time: 'night',
+      method: 'walk',
+      timeStart: 13,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=n9JDdzM0Ag8',
+      time: 'night',
+      method: 'walk',
+      timeStart: 13,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=avQ-Sa3QIWU',
+      time: 'day',
+      method: 'walk',
+      timeStart: 70,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=YORkrd05BtA',
+      time: 'day',
+      method: 'car',
+      timeStart: 1,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=YORkrd05BtA',
+      time: 'night',
+      method: 'car',
+      timeStart: 1560,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=vffgKEGG-8Y',
+      time: 'day',
+      method: 'car',
+      timeStart: 69,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=pFFNRjC0qXQ',
+      time: 'night',
+      method: 'car',
+      timeStart: 1,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=pRm5WYmJIbA',
+      time: 'night',
+      method: 'car',
+      timeStart: 451,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=a8o2uaSxNsI',
+      time: 'night',
+      method: 'train',
+      timeStart: 480,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=a8o2uaSxNsI',
+      time: 'day',
+      method: 'train',
+      timeStart: 480,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=_0aDhIhfvFA',
+      time: 'day',
+      method: 'train',
+      timeStart: 120,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=2XliDrPGqlM',
+      time: 'day',
+      method: 'train',
+      timeStart: 180,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=2XliDrPGqlM',
+      time: 'day',
+      method: 'train',
+      timeStart: 3290,
+    },
+    {
+      url: 'https://www.youtube.com/watch?v=2XliDrPGqlM',
+      time: 'day',
+      method: 'train',
+      timeStart: 5197,
+    },
+  ],
+};
