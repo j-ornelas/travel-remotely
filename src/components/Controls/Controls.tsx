@@ -1,17 +1,19 @@
-import React, { useState, useEffect } from 'react';
+import './audioplayer.css';
 import styled from '@emotion/styled';
 import AudioPlayer from 'react-h5-audio-player';
+import Refresh from '@material-ui/icons/Refresh';
+import React, { useState, useEffect } from 'react';
+import MarqueeText from 'react-marquee-text-component';
 import Visibility from '@material-ui/icons/Visibility';
 import VisibilityOff from '@material-ui/icons/VisibilityOff';
-import Refresh from '@material-ui/icons/Refresh';
-import MarqueeText from 'react-marquee-text-component';
-import './audioplayer.css';
 
 import { cities } from '../../data/cities';
 import { colors } from '../../data/variables';
-import { RadioStation } from '../../data/dataTypes';
-import { getRandomFromList } from '../../utils/getRandomFromList';
 import { ControlsProps } from './controls-props';
+import { RadioStation } from '../../data/dataTypes';
+import { breakpoints } from '../../utils/variables';
+import { useWindowSize } from '../../utils/useWindowSize';
+import { getRandomFromList } from '../../utils/getRandomFromList';
 
 export const Controls = ({
   currentCity,
@@ -44,8 +46,10 @@ export const Controls = ({
       updateOptions('method', 'any');
     }
   }, [currentCity]);
+  const width = useWindowSize().width;
+  const isMobile = width ? width < breakpoints.tablet : false;
   return (
-    <StyledControls>
+    <StyledControls isMobile={isMobile}>
       <HidableContent isVisible={isVisible}>
         <Header>CITIES:</Header>
         <Scrollable>
@@ -240,9 +244,9 @@ export const Controls = ({
   );
 };
 
-const StyledControls = styled.div({
+const StyledControls = styled.div(({ isMobile }: { isMobile: boolean }) => ({
   border: `1px solid ${colors.light02}`,
-  width: '375px',
+  width: !isMobile ? '375px' : '250px',
   borderRadius: '6px',
   padding: '8px',
   position: 'absolute',
@@ -250,12 +254,12 @@ const StyledControls = styled.div({
   right: 32,
   backgroundColor: colors.darker07,
   color: colors.lighter,
-  opacity: 0.6,
+  opacity: !isMobile ? 0.6 : 0.9,
   ':hover': {
     opacity: '1',
   },
   transition: 'opacity 0.3s ease-in-out',
-});
+}));
 const Option = styled.div`
   padding: 8px;
   border-bottom: 1px solid ${colors.light02};

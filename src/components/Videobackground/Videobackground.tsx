@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from 'react';
-import ReactPlayer from 'react-player';
 import styled from '@emotion/styled';
+import ReactPlayer from 'react-player';
+import React, { useEffect, useState } from 'react';
 
+import Controls from '../Controls';
 import { cities } from '../../data/cities';
 import { Video } from '../../data/dataTypes';
-import Controls from '../Controls';
+import { breakpoints } from '../../utils/variables';
+import { useWindowSize } from '../../utils/useWindowSize';
 import { getRandomFromList } from '../../utils/getRandomFromList';
 
 export interface VideoOptions {
@@ -59,24 +61,25 @@ export const Videobackground = () => {
       getRandomFromList(filterVideos(currentCity.videos, videoOptions)),
     );
   }, [videoOptions]);
+  const width = useWindowSize().width;
+  const isMobile = width ? width < breakpoints.tablet : false;
   return (
     <StyledVideo>
       <VideoContainer>
         <ReactPlayer
           url={currentVideo.url}
           controls={false}
-          height="115%"
-          width="115%"
+          height={!isMobile ? '115%' : '275%'}
+          width={!isMobile ? '115%' : '275%'}
           muted={streetVolume === 0}
           volume={streetVolume / 100}
           playing={true}
           style={{
-            height: '120%',
-            width: '110%',
             position: 'absolute',
-            top: -57,
-            left: -120,
+            top: !isMobile ? -57 : -580,
+            left: !isMobile ? -120 : -420,
             overflow: 'hidden',
+            transform: !isMobile ? 'rotate(0deg)' : 'rotate(90deg)',
           }}
           config={{
             youtube: {
@@ -84,16 +87,6 @@ export const Videobackground = () => {
                 disablekb: 1,
                 showinfo: 0,
                 start: currentVideo.timeStart,
-              },
-            },
-            file: {
-              attributes: {
-                style: {
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'cover',
-                  overflow: 'hidden',
-                },
               },
             },
           }}
@@ -117,13 +110,13 @@ export const Videobackground = () => {
   );
 };
 
-const StyledVideo = styled.div({
-  height: '100vh',
-  overflow: 'hidden',
-});
-const VideoContainer = styled.div({
-  pointerEvents: 'none', // TODO: we may remove this once we hide share/more    position: "relative",
-  position: 'relative',
-  overflow: 'hidden',
-  height: '100%',
-});
+const StyledVideo = styled.div`
+  height: 100vh;
+  overflow: hidden;
+`;
+const VideoContainer = styled.div`
+  pointer-events: none;
+  position: relative;
+  overflow: 'hidden';
+  height: 100%;
+`;
