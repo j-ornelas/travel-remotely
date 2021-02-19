@@ -10,6 +10,7 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import { cities } from '../../data/cities';
 import { colors } from '../../data/variables';
 import { ControlsProps } from './controls-props';
+import { isNewCity } from '../../utils/isNewCity';
 import { RadioStation } from '../../data/dataTypes';
 import { breakpoints } from '../../utils/variables';
 import { useWindowSize } from '../../utils/useWindowSize';
@@ -63,6 +64,7 @@ export const Controls = ({
             >
               <Subheader>{city.name}</Subheader>
               {city.name === currentCity.name && <Refresh />}
+              <Subheader2>{isNewCity(city.dateAdded) && 'NEW!'}</Subheader2>
             </OptionRow>
           ))}
         </Scrollable>
@@ -299,6 +301,11 @@ const Subheader = styled.div({
   paddingBottom: '2px',
   paddingTop: '2px',
   paddingRight: '8px',
+});
+const Subheader2 = styled(Subheader)({
+  color: colors.primary,
+  fontSize: '12px',
+  paddingLeft: '8px',
 });
 const RadioContainer = styled.div({
   display: 'flex',

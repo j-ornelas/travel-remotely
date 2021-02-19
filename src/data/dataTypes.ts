@@ -12,6 +12,7 @@ export interface Video {
   time: string; // day, night (time of dayvideo takes place)
 }
 export interface City {
+  dateAdded?: string;
   name: string;
   radio: RadioStation[];
   videos: Video[];

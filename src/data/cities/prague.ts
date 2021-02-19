@@ -1,6 +1,7 @@
 import { City } from '../dataTypes';
 
 export const prague: City = {
+  dateAdded: '2021-02-18',
   name: 'Prague',
   radio: [
     {
