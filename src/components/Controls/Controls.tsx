@@ -254,9 +254,9 @@ const StyledControls = styled.div(({ isMobile }: { isMobile: boolean }) => ({
   right: !isMobile ? 32 : 0,
   backgroundColor: colors.darker07,
   color: colors.lighter,
-  opacity: !isMobile ? 0.6 : 0.9,
+  opacity: !isMobile ? '0.6' : '0.9',
   ':hover': {
-    opacity: '1',
+    opacity: '0.9',
   },
   transition: 'opacity 0.3s ease-in-out',
 }));
