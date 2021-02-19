@@ -51,7 +51,10 @@ export const Controls = ({
   return (
     <StyledControls isMobile={isMobile}>
       <HidableContent isVisible={isVisible}>
-        <Header>CITIES:</Header>
+        <HeaderContainer>
+          <Header>CITIES:</Header>
+          <Header2>new cities added weekly</Header2>
+        </HeaderContainer>
         <Scrollable>
           {cities.map(city => (
             <OptionRow
@@ -276,6 +279,10 @@ const OptionRow = styled(Option)({
   display: 'flex',
   alignItems: 'center',
 });
+const HeaderContainer = styled.div({
+  display: 'flex',
+  justifyContent: 'space-between',
+});
 const Header = styled.div({
   fontSize: '14px',
   fontWeight: 'bold',
@@ -283,6 +290,10 @@ const Header = styled.div({
   paddingBottom: '4px',
   color: colors.primary,
 });
+const Header2 = styled(Header)`
+  font-size: 12px;
+  font-weight: 400;
+`;
 const Subheader = styled.div({
   fontWeight: 'bold',
   paddingBottom: '2px',
