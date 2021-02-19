@@ -69,15 +69,15 @@ export const Videobackground = () => {
         <ReactPlayer
           url={currentVideo.url}
           controls={false}
-          height={!isMobile ? '115%' : '275%'}
-          width={!isMobile ? '115%' : '275%'}
+          height={!isMobile ? '115%' : '250%'}
+          width={!isMobile ? '115%' : '250%'}
           muted={streetVolume === 0}
           volume={streetVolume / 100}
           playing={true}
           style={{
             position: 'absolute',
             top: !isMobile ? -57 : -580,
-            left: !isMobile ? -120 : -420,
+            left: !isMobile ? -120 : -350,
             overflow: 'hidden',
             transform: !isMobile ? 'rotate(0deg)' : 'rotate(90deg)',
           }}

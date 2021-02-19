@@ -246,12 +246,12 @@ export const Controls = ({
 
 const StyledControls = styled.div(({ isMobile }: { isMobile: boolean }) => ({
   border: `1px solid ${colors.light02}`,
-  width: !isMobile ? '375px' : '250px',
+  width: !isMobile ? '375px' : '325px',
   borderRadius: '6px',
   padding: '8px',
   position: 'absolute',
-  bottom: 32,
-  right: 32,
+  bottom: !isMobile ? 32 : 0,
+  right: !isMobile ? 32 : 0,
   backgroundColor: colors.darker07,
   color: colors.lighter,
   opacity: !isMobile ? 0.6 : 0.9,
