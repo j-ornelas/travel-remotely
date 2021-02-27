@@ -1,7 +1,7 @@
 import { City } from '../dataTypes';
 
-export const dehli: City = {
-  name: 'Dehli',
+export const delhi: City = {
+  name: 'Delhi',
   radio: [
     {
       url: 'https://radioindia.net/radio/mirchi98/icecast.audio',

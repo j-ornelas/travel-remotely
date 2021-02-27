@@ -1,5 +1,5 @@
 import { rome } from './rome';
-import { dehli } from './dehli';
+import { delhi } from './delhi';
 import { dubai } from './dubai';
 import { paris } from './paris';
 import { seoul } from './seoul';
@@ -8,9 +8,11 @@ import { london } from './london';
 import { moscow } from './moscow';
 import { prague } from './prague';
 import { bangkok } from './bangkok';
+import { chicago } from './chicago';
 import { istanbul } from './istanbul';
 import { lasVegas } from './lasvegas';
 import { hongKong } from './hong-kong';
+import { marrakesh } from './marrakesh';
 import { singapore } from './singapore';
 import { stockholm } from './stockholm';
 import { newyorkcity } from './newyorkcity';
@@ -19,13 +21,15 @@ import { sanfrancisco } from './sanfrancisco';
 
 export const cities = [
   bangkok,
-  dehli,
+  chicago,
+  delhi,
   dubai,
   hongKong,
   istanbul,
   kualaLumpur,
   lasVegas,
   london,
+  marrakesh,
   moscow,
   newyorkcity,
   paris,
