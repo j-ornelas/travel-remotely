@@ -15,6 +15,7 @@ import { hongKong } from './hong-kong';
 import { marrakesh } from './marrakesh';
 import { singapore } from './singapore';
 import { stockholm } from './stockholm';
+import { neworleans } from './neworleans';
 import { newyorkcity } from './newyorkcity';
 import { kualaLumpur } from './kuala-lumpur';
 import { sanfrancisco } from './sanfrancisco';
@@ -31,6 +32,7 @@ export const cities = [
   london,
   marrakesh,
   moscow,
+  neworleans,
   newyorkcity,
   paris,
   prague,

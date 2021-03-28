@@ -202,5 +202,11 @@ export const newyorkcity: City = {
       method: 'train',
       timeStart: 16,
     },
+    {
+      url: 'https://www.youtube.com/watch?v=J87r4Wlw_3o',
+      time: 'day',
+      method: 'walk',
+      timeStart: 128,
+    },
   ],
 };
