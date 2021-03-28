@@ -2,6 +2,7 @@ import { City } from '../dataTypes';
 
 export const newyorkcity: City = {
   name: 'New York City',
+  dateAdded: '01/01/2021',
   radio: [
     {
       url: 'https://fm939.wnyc.org/wnycfm-web?nyprBrowserId=5a645ea305fc4c00',

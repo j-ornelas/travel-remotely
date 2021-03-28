@@ -2,6 +2,7 @@ import { City } from '../dataTypes';
 
 export const neworleans: City = {
   name: 'New Orleans',
+  dateAdded: '03/28/2021',
   radio: [
     {
       url: 'https://wwoz-sc.streamguys1.com/wwoz-hi.mp3',
